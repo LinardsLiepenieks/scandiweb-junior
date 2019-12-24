@@ -1,0 +1,123 @@
+/*colors
+white: #FFFFFF
+grey: #F9F9F9
+full red: #DD4949
+light red: #E46A69
+*/
+
+
+/*---------------------------------------------------------hackerino*/
+html {
+  box-sizing: border-box;
+    font-family: "Arial", sans-serif;
+}
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+
+.clearfix {
+   overflow: auto;
+}
+.clearfix::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+
+
+/*----------------------------------------------------- Global alterations*/
+
+header{
+    background: white;
+    height: 10%;
+}
+
+body{
+    margin: 0 auto;
+    height: 100%;
+    width: 100%;
+}
+
+footer{
+    height: 10%;
+    background: #E46A69;
+    margin: 0 auto;
+}
+
+
+/*---------------------------------------------------------wrappers*/
+
+.body-wrapper{
+    height: 80%;
+    width: 100%;
+    background: #F9F9F9;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.inner-wrapper
+{
+    display: flex;
+    
+}
+.btn
+{
+    color: #DD4949;
+    background: white;
+}
+
+.btn:hover{
+    color: white;
+    background: #DD4949;
+}
+
+
+/*------------------------------------------------------------Insert box*/
+
+.button-wrapper{
+    background: #E46A69;
+    padding: 20px;
+    margin: 20px;
+}
+
+label{
+    font-size: 40px;
+    padding: 25px;
+    color: white;
+}
+
+input[type="text"]{
+    float: right;
+    height: 40px;
+    font-size: 35px;
+    
+}
+
+input[type="submit"]{
+    height: 10%;;
+    width: 25%;
+    font-size: 35px;
+    float: right;
+    clear: right;
+}
+
+.type
+{
+    display: block;
+    font-size: 30px;
+    width: 100%;
+    padding: 10px;
+    margin: 15px  0px;
+}
+
+
+/*-------------------------------------------------------------Header*/
+#main-title{
+    color: #DD4949;
+    padding: 10;
+    font-size: 60;
+    
+    height: 10%;
+
+}
