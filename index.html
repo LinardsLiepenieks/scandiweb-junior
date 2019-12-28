@@ -1,0 +1,81 @@
+
+<html>
+
+<head>
+    
+    <title>Product add</title>    
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+    <script src="https://code.jquery.com/jquery-3.1.1.js"></script>
+    <script src="javascript/script.js"></script>
+
+   
+</head>
+
+
+
+<body>
+    <header> 
+        <h1>Product add</h1>
+        <button>SAVE</button>
+    </header>
+
+    <div class="body-wrapper">
+        
+            
+           <div class="button-wrapper">
+
+                <form  action="/action_page.php">
+                    <label> SKU:</label>
+                    <input type="text" name="SKU" value=""><br>
+                    <label>Name:</label> 
+                    <input type="text" name="Name" value=""><br>
+                    <label>Price:</label> 
+                    <input type="text" name="Price" value=""><br>
+                    <label>Type Switcher</label>
+                    <select id="type-switcher">
+                         <option selected disabled hidden value="def">Type switcher</option>
+                        <option value="book">Book</option>
+                        <option value="furniture">Furniture</option>
+                        <option value="DVD-disc">DVD-disc</option>
+                    </select><br>
+                    
+                    
+                </form>
+
+            </div>
+        
+            <div id="special-atribute" class="button-wrapper">
+                <div class ="def value">Pick a type</div>
+                
+                <div class="book value">Books. <br>
+                <label>Weight: </label>
+                <input type="text" name="Weight" value=""><br>
+                <p>Please input book weight in kilograms.</p>
+                </div>
+                
+                <div class="furniture value">Furniture.<br>
+                <label>Height: </label> 
+                <input type="text" name="height" value=""><br>
+                <label>Width: </label> 
+                <input type="text" name="width" value=""><br>
+                <label>Length: </label> 
+                <input type="text" name="length" value=""><br>
+                <p>Please input size of furniture (HxWxL) in the proper fields in centimeters .</p>
+                </div>
+        
+                <div class="DVD-disc value">DVD-disc <br>
+                <label>Size: </label>
+                <input type="text" name="size" value=""><br>
+                <p>Please input size of disc in megabytes.</p>
+                </div>
+
+            </div>
+            
+        </div>
+        
+    
+
+    <footer></footer>
+    </body>
+
+</html>

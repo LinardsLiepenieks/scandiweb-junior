@@ -4,13 +4,20 @@ grey: #F9F9F9
 full red: #DD4949
 light red: #E46A69
 */
+/* Media Queries: Tablet Landscape */
+@media screen and (max-width: 1060px) {
+    #primary { width:67%; }
+    #secondary { width:30%; margin-left:3%;}  
+}
 
+/* Media Queries: Tabled Portrait */
+@media screen and (max-width: 768px) {
+    #primary { width:100%; }
+    #secondary { width:100%; margin:0; border:none; }
+}
 
 /*---------------------------------------------------------hackerino*/
-html {
-  box-sizing: border-box;
-    font-family: "Arial", sans-serif;
-}
+
 *, *:before, *:after {
   box-sizing: inherit;
 }
@@ -26,47 +33,56 @@ html {
 
 
 /*----------------------------------------------------- Global alterations*/
-
-header{
-    background: white;
-    height: 10%;
-}
-
-body{
-    margin: 0 auto;
-    height: 100%;
-    width: 100%;
-}
-
-footer{
-    height: 10%;
-    background: #E46A69;
+html {
+    box-sizing: border-box;
+    font-family: "Arial", sans-serif;
     margin: 0 auto;
 }
 
-
-/*---------------------------------------------------------wrappers*/
-
-.body-wrapper{
-    height: 80%;
-    width: 100%;
-    background: #F9F9F9;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
-.inner-wrapper
+/*-------------------------------------------------------------Header*/
+header
 {
     display: flex;
-    
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    height: 100px;
 }
+header h1
+{
+    color: #DD4949;
+    font-size: 50px;
+    margin: 0;
+    padding: px 20px;
+}
+header button
+{
+    background: #DD4949;
+    color: white;
+    font-size: 25px;
+}
+
+/*---------------------------------------------------------body*/
+body{
+    min-height:100%;
+    position:relative;
+    margin: 0 auto;
+    height:100%;
+}
+.body-wrapper{
+    background: #F9F9F9;
+    padding: 20px;
+    min-height: calc(100vh - 140px);
+    width: 100%;
+}
+
+/*-----------------------------------------------------buttons*/
+
 .btn
 {
     color: #DD4949;
     background: white;
 }
-
 .btn:hover{
     color: white;
     background: #DD4949;
@@ -79,45 +95,47 @@ footer{
     background: #E46A69;
     padding: 20px;
     margin: 20px;
+    width: 50%;
+    overflow: hidden;
+    height: auto;
+    min-height: 100px;
 }
-
 label{
     font-size: 40px;
-    padding: 25px;
     color: white;
+    width: auto;
+    overflow: hidden;
 }
-
 input[type="text"]{
     float: right;
     height: 40px;
     font-size: 35px;
+    width: 50%;
     
 }
-
-input[type="submit"]{
-    height: 10%;;
-    width: 25%;
-    font-size: 35px;
-    float: right;
-    clear: right;
-}
-
-.type
+#type-switcher
 {
-    display: block;
-    font-size: 30px;
-    width: 100%;
-    padding: 10px;
-    margin: 15px  0px;
+   float: right;
+    height: 40px;
+    font-size: 35px;
+    width: 50%;  
+}
+/*-------------------------------------------Special Attribute*/
+#special-atribute{
+    font-size: 35px;
+    color: white;
+    
+}
+#special-atribute p{
+    font-size: 20px;
 }
 
+/*-------------------------------------------------------footer*/
 
-/*-------------------------------------------------------------Header*/
-#main-title{
-    color: #DD4949;
-    padding: 10;
-    font-size: 60;
-    
-    height: 10%;
-
+footer{
+    position:relative;
+    bottom:0;
+    width:100%;
+    height:40px;   
+    background: #E46A69;
 }
