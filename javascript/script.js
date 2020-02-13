@@ -3,6 +3,7 @@
 $(document).ready(function(){
     $("#MyButton").click(function(){
     combineAndSendForms();
+	return false;
   });
     
     
