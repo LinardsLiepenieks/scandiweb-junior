@@ -1,15 +1,44 @@
 
 
 $(document).ready(function(){
+    
     $("#MyButton").click(function(){
-    combineAndSendForms();
-	return false;
+    var sku = $("#SKU").val();
+    var name = $("#Name").val();
+    var price = $("#Price").val();
+    var weight = $("#Weight").val();
+    var height = $("#Height").val();
+    var width = $("#Width").val();
+    var length = $("#Length").val();
+    var size = $("#Size").val();
+        
+    $.ajax({
+                    url:'php/add.php',
+                    method:'POST',
+                    data:{
+                        sku:sku,
+                        name:name,
+                        price:price,
+                        weight:weight,
+                        height:height,
+                        width:width,
+                        length:length,
+                        size:size
+                        
+                    },
+                   success:function(data){
+                       alert(data);
+                   }
+                });
+
+    
   });
     
     
     $("#type-switcher").change(function(){
             $(this).find("option:selected").each(function(){
                 var optionValue = $(this).attr("value");
+                console.log(optionValue);
                 if(optionValue){
                     $(".value").not("." + optionValue).hide();
                     $("." + optionValue).show();
@@ -20,21 +49,3 @@ $(document).ready(function(){
         }).change();
     });
 
-
-
-
-function combineAndSendForms() {
-    var $newForm = $("<form></form>")    // our new form.
-        .attr({method : "POST", action : "php/connect.php"}) // customise as required
-    ;
-    $(":input:not(:submit, :button)").each(function() {  // grab all the useful inputs
-        $newForm.append($("<input type=\"hidden\" />")   // create a new hidden field
-            .attr('name', this.name)   // with the same name (watch out for duplicates!)
-            .val($(this).val())        // and the same value
-        );
-    });
-    $newForm
-        .appendTo(document.body)  // not sure if this is needed?
-        .submit()                 // submit the form
-    ;
-}

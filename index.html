@@ -25,23 +25,33 @@
             
            <div class="button-wrapper">
 
-                <form  action="/action_page.php">
                     <label> SKU:</label>
-                    <input type="text" name="SKU" value=""><br>
+                    <input id="SKU" type="text" >
+               <br>
                     <label>Name:</label> 
-                    <input type="text" name="Name" value=""><br>
+                    <input id = "Name" type="text">
+               <br>
                     <label>Price:</label> 
-                    <input type="text" name="Price" value=""><br>
+                    <input id="Price" type="text">
+               <br>
                     <label>Type Switcher</label>
                     <select id="type-switcher">
-                         <option selected disabled hidden value="def">Type switcher</option>
-                        <option value="book">Book</option>
-                        <option value="furniture">Furniture</option>
-                        <option value="DVD-disc">DVD-disc</option>
-                    </select><br>
+                         <option selected disabled hidden value="def">
+                         Type switcher
+                         </option>
+                         <option value="book">
+                         Book
+                         </option>
+                         <option value="furniture">
+                         Furniture
+                         </option>
+                         <option value="DVD-disc">
+                         DVD-disc
+                         </option>
+                    </select>
+               <br>
                     
                     
-                </form>
 
             </div>
         
@@ -50,23 +60,23 @@
                 
                 <div class="book value">Books. <br>
                 <label>Weight: </label>
-                <input type="text" name="Weight" value=""><br>
+                <input type="text" id="Weight"><br>
                 <p>Please input book weight in kilograms.</p>
                 </div>
                 
                 <div class="furniture value">Furniture.<br>
                 <label>Height: </label> 
-                <input type="text" name="height" value=""><br>
+                <input type="text" id="Height"><br>
                 <label>Width: </label> 
-                <input type="text" name="width" value=""><br>
+                <input type="text" id="Width"><br>
                 <label>Length: </label> 
-                <input type="text" name="length" value=""><br>
+                <input type="text" id="Length"><br>
                 <p>Please input size of furniture (HxWxL) in the proper fields in centimeters .</p>
                 </div>
         
                 <div class="DVD-disc value">DVD-disc <br>
                 <label>Size: </label>
-                <input type="text" name="size" value=""><br>
+                <input type="text" id="Size"><br>
                 <p>Please input size of disc in megabytes.</p>
                 </div>
 
