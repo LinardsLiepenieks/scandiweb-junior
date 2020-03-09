@@ -25,8 +25,8 @@ $(document).ready(function(){
                         width:width,
                         length:length,
                         size:size
-                        
                     },
+        
                    success:function(data){
                        alert(data);
                    }
@@ -42,10 +42,9 @@ $(document).ready(function(){
                 console.log(optionValue);
                 if(optionValue){
                     $(".value").not("." + optionValue).hide();
+                    $("." + optionValue + " :input").val("");
                     $("." + optionValue).show();
-                } else{
-                    $(".value").hide();
-                }
+                } 
             });
         }).change();
     

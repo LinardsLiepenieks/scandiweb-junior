@@ -36,60 +36,56 @@ light red: #E46A69
 html {
     box-sizing: border-box;
     font-family: "Arial", sans-serif;
-    margin: 0 auto;
+    min-height: 100%;
+    margin: 0px;
+}
+body
+{
+    min-height: 100vh;
+    background: #F9F9F9;
+
+}
+button
+{
+    background: #DD4949;
+    color: white;
+    
+}
+button:hover
+{
+    background: white;
+    color: #DD4949;
+}
+header{
+    padding: 20px;
+}
+label{
+    font-size: 40px;
+    color: white;
 }
 
 /*-------------------------------------------------------------Header*/
-header
-{
-    
-    overflow: hidden;
-    text-align: right;
-    vertical-align: middle;
 
-
-}
 
 header h1
 {
     color: #DD4949;
+    font-size: 50px;
     display: inline-block;
-        font-size: 50px;
 }
 header button
 {
-    background: #DD4949;
     color: white;
     font-size: 50px;
-    
+    float: right;
 }
+
 
 /*---------------------------------------------------------body*/
-body{
-    min-height:100%;
-    position:relative;
-    margin: 0 auto;
-    height:100%;
-}
+
 .body-wrapper{
-    background: #F9F9F9;
     padding: 20px;
-    min-height: calc(100vh - 140px);
-    width: 100%;
 }
-
-/*-----------------------------------------------------buttons*/
-
-.btn
-{
-    color: #DD4949;
-    background: white;
-}
-.btn:hover{
-    color: white;
-    background: #DD4949;
-}
-
 
 /*------------------------------------------------------------Insert box*/
 
@@ -98,26 +94,19 @@ body{
     padding: 20px;
     margin: 20px;
     width: 50%;
-    overflow: hidden;
-    height: auto;
-    min-height: 100px;
 }
-label{
-    font-size: 40px;
-    color: white;
-    width: auto;
-    overflow: hidden;
-}
-input[type="text"]{
+
+.button-wrapper input[type="text"]{
     float: right;
     height: 40px;
     font-size: 35px;
     width: 50%;
+    color: black;
     
 }
-#type-switcher
+.button-wrapper select
 {
-   float: right;
+    float: right;
     height: 40px;
     font-size: 35px;
     width: 50%;  
@@ -135,9 +124,10 @@ input[type="text"]{
 /*-------------------------------------------------------footer*/
 
 footer{
-    position:relative;
-    bottom:0;
     width:100%;
-    height:40px;   
+    height: 40px;
     background: #E46A69;
+    position: absolute;
+      bottom: 0;
+
 }
