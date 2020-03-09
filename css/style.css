@@ -58,6 +58,7 @@ button:hover
 }
 header{
     padding: 20px;
+    background: white;
 }
 label{
     font-size: 40px;
@@ -116,6 +117,9 @@ header button
     font-size: 35px;
     color: white;
     
+}
+#special-atribute input[type="text"]{
+    color: black;
 }
 #special-atribute p{
     font-size: 20px;
