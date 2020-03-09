@@ -42,24 +42,26 @@ html {
 /*-------------------------------------------------------------Header*/
 header
 {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 20px;
-    height: 100px;
+    
+    overflow: hidden;
+    text-align: right;
+    vertical-align: middle;
+
+
 }
+
 header h1
 {
     color: #DD4949;
-    font-size: 50px;
-    margin: 0;
-    padding: px 20px;
+    display: inline-block;
+        font-size: 50px;
 }
 header button
 {
     background: #DD4949;
     color: white;
-    font-size: 25px;
+    font-size: 50px;
+    
 }
 
 /*---------------------------------------------------------body*/

@@ -2,7 +2,7 @@
 
 $(document).ready(function(){
     
-    $("#MyButton").click(function(){
+    $("#Save").click(function(){
     var sku = $("#SKU").val();
     var name = $("#Name").val();
     var price = $("#Price").val();
@@ -11,6 +11,7 @@ $(document).ready(function(){
     var width = $("#Width").val();
     var length = $("#Length").val();
     var size = $("#Size").val();
+        
         
     $.ajax({
                     url:'php/add.php',
@@ -47,5 +48,6 @@ $(document).ready(function(){
                 }
             });
         }).change();
+    
     });
 
