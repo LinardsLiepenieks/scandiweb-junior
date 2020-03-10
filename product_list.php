@@ -20,7 +20,7 @@
         <select>
         <option>Mass delete action</option> 
         </select>
-        <button>Apply</button>
+        <button id="Apply">Apply</button>
         </span>
     </header>
     <div class="body-wrapper">
@@ -37,18 +37,31 @@
        $C = 0; 
     while($row=mysqli_fetch_array($results)){
         
+        $SA = '';
+        if($row['SA']=="book")
+            {
+                 $SA = 'Weight: '.$row['weight'] .' KG';
+            }
+        if($row['SA']=="DVD-disc")
+            {
+                 $SA = 'Size: '.$row['size'] .' MB';
+            }
+         if($row['SA']=="furniture")
+            {
+                $SA = 'Dimensions: '.$row['height'] .'x'.$row['width'] .'x'.$row['length'];
+            }
         if($C%4==0)
         {
          echo'<div class="item-row">';
         }
             echo'<div class="item">
             <div id="item-top">
-        <input type="checkbox">
-        </div>
-        <label>'.$row['SKU'].'</label>
-        <label>'.$row['name'].'</label>
-        <label>'.$row['price'].'$ </label>
-
+            <input class="check" type="checkbox">
+            </div>
+            <label class="SKU">'.$row['SKU'].'</label>
+            <label>'.$row['name'].'</label>
+            <label>'.$row['price'].'$</label>
+            <label>'.$SA.'</label>
             </div>';
         $C+=1;
         if($C%4==0)
