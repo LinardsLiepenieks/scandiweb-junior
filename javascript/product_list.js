@@ -1,15 +1,33 @@
 $(document).ready(function() {    
-    
+
         $("#Apply").click(function(){
+            
+            var del = new Array();
+            
             $(".item").each(function(i, obj) {
+
                 
-                console.log($(this).children(".SKU").text());
                     var isChecked = $(this).find('input[type="checkbox"]').prop('checked');
-                    console.log(isChecked);
-               // console.log($(this).children(".check").attr(":checked"));
-               
-
-});
-
-              });
-});
+                
+                    if(isChecked==true)
+                        {
+                            del.push($(this).children(".SKU").text());
+                        }
+                
+                                              });
+            $.ajax({
+                
+                        url:'php/delete.php',
+                        method:'POST',
+                        data:{ del:del },
+                        
+                        success:function(data){
+                            alert("Deleted: ".concat(data));
+                            location.reload();
+                        },
+                        dataType:"json"
+                    });
+            
+            
+                                    });
+                            }); 

@@ -5,8 +5,10 @@
     <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
     <link rel="stylesheet" type="text/css" href="css/style.css">
    
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-    <script src="javascript/product_list.js"></script>
+<script
+  src="https://code.jquery.com/jquery-3.4.1.js"
+  integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU="
+  crossorigin="anonymous"></script>    <script src="javascript/product_list.js"></script>
 
    
 </head>
@@ -50,6 +52,7 @@
             {
                 $SA = 'Dimensions: '.$row['height'] .'x'.$row['width'] .'x'.$row['length'];
             }
+        
         if($C%4==0)
         {
          echo'<div class="item-row">';

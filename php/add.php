@@ -27,7 +27,6 @@ if ($conn->connect_error){
     $Price = $_POST['price'];
     $Weight = $Height = $Length = $Width = $Size = '';
     $SA = $_POST['sa'];
-    echo $SA;
     
 
 
@@ -47,14 +46,13 @@ if ($conn->connect_error){
         $Size = $_POST['size'];}
 
     else{
-        echo "Select a product type";
+        echo ('Choose a product type');
         return false;
     }
-
     $sql = "INSERT INTO items (SKU, name, price, SA, weight, height, width, length, size)
     VALUES ('$SKU', '$Name', '$Price', '$SA', '$Weight', '$Height', '$Width', '$Length', '$Size')";
 
     mysqli_query($conn, $sql);
-
+    echo 'Saved';
 
 ?>

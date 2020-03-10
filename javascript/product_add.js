@@ -30,9 +30,10 @@ $(document).ready(function(){
                         sa:sa
                     },
         
-                   success:function(data){
-                       
+                   success: function(data){
+                       alert(data);
                    }
+                    
                 });
 
     
