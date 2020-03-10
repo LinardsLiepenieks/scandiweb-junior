@@ -11,6 +11,8 @@ $(document).ready(function(){
     var width = $("#Width").val();
     var length = $("#Length").val();
     var size = $("#Size").val();
+    var sa = $("#type-switcher").children("option:selected").val();
+
         
         
     $.ajax({
@@ -24,11 +26,12 @@ $(document).ready(function(){
                         height:height,
                         width:width,
                         length:length,
-                        size:size
+                        size:size,
+                        sa:sa
                     },
         
                    success:function(data){
-                       alert(data);
+                       
                    }
                 });
 
@@ -39,12 +42,12 @@ $(document).ready(function(){
     $("#type-switcher").change(function(){
             $(this).find("option:selected").each(function(){
                 var optionValue = $(this).attr("value");
-                console.log(optionValue);
+                console.log(".value");
                 if(optionValue){
-                    $(".value").not("." + optionValue).hide();
-                    $("." + optionValue + " :input").val("");
                     $("." + optionValue).show();
+                    $(".value").not("." + optionValue).hide();
                 } 
+               
             });
         }).change();
     

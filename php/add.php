@@ -26,26 +26,24 @@ if ($conn->connect_error){
     $Name = $_POST['name'];
     $Price = $_POST['price'];
     $Weight = $Height = $Length = $Width = $Size = '';
-    
+    $SA = $_POST['sa'];
+    echo $SA;
     
 
 
-    if($_POST['weight']!=="")
+    if($SA == 'book')
     {
-        $SA = "Book";
         $Weight = $_POST['weight'];
     }
 
-    else if($_POST['height']!=="")
+    else if($SA == 'furniture')
     {
-        $SA = "Furniture";
         $Height = $_POST['height'];
         $Width = $_POST['width'];
         $Length = $_POST['length'];
     }
 
-    else if ($_POST['size']!==""){
-        $SA = "DVD-Disc";
+    else if ($SA == 'DVD-disc'){
         $Size = $_POST['size'];}
 
     else{

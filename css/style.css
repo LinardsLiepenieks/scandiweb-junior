@@ -59,6 +59,9 @@ button:hover
 header{
     padding: 20px;
     background: white;
+    display:flex;
+    
+
 }
 label{
     font-size: 40px;
@@ -72,20 +75,68 @@ header h1
 {
     color: #DD4949;
     font-size: 50px;
-    display: inline-block;
+    margin: 0;
+    width: 20%;
+
 }
 header button
 {
     color: white;
-    font-size: 50px;
-    float: right;
+    font-size: 20px;
+
+}
+header select
+{
+    font-size: 20px;
 }
 
+header span {
+
+    display: inline-block;
+    text-align: right;
+    align-self: center;
+    width: 80%;
+
+}
 
 /*---------------------------------------------------------body*/
 
 .body-wrapper{
     padding: 20px;
+}
+
+.item
+{
+    width: 20%;
+    height: 25%;
+    margin: 25px;
+    padding: 5px;
+    background: white;
+  border-style: solid;
+  border-color: coral;
+    display:inline-block;
+    text-align: center;
+}
+.item input[type="checkbox"]
+{
+    width: 30px;
+    height: 30px;
+}
+.item-row
+{
+    width: 100%;
+    text-align: center;
+}
+.item label
+{
+    font-size: 20px;
+    color: black;
+    display: block;
+}
+#item-top
+{
+    width: 100%;
+    text-align: left;
 }
 
 /*------------------------------------------------------------Insert box*/
