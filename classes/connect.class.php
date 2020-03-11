@@ -7,7 +7,7 @@
         private $password = "";
         private $dbname = "products";
         
-        protected function connectDB(){
+        function connectDB(){
             $conn = new mysqli($this->servername, $this->username, $this->password, $this->dbname) or die("Connection failed: " . $conn->connect_error);
             
             if ($conn->connect_error){return $this->newDB();}

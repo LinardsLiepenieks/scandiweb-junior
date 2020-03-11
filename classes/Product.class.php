@@ -18,27 +18,22 @@ class Product extends Connect{
         $this->Price = $Price;
         $this->SA = $SA;
     
-    //Set special attribute
-    if($this->SA == 'book'){$this->Weight = $Weight;}
-    else if($this->SA == 'furniture'){
-        $this->Height = $Height;
-        $this->Width = $Width;
-        $this->Length = $Length;}
-    else if ($this->SA == 'DVD-disc'){$this->Size = $Size;}
-    else{
-        echo ('Choose a product type');}
+            //Set special attribute
+            if($this->SA == 'book'){$this->Weight = $Weight;}
+            else if($this->SA == 'furniture'){
+                $this->Height = $Height;
+                $this->Width = $Width;
+                $this->Length = $Length;}
+            else if ($this->SA == 'DVD-disc'){$this->Size = $Size;}
+            else{echo ('Choose a product type');}
+            }
+
+            public function get_sa(){
+                return $this->SA; 
     }
     
-    public function get_sa()
-    {
-        
-        return $this->SA;
-        
-    }
     //Save the proper value for SpecialAttribute
     function Save(){
-    
-    
     //Insert into database
     $query = "INSERT INTO items (SKU, name, price, SA, weight, height, width, length, size)
     VALUES ('$this->SKU', '$this->Name', '$this->Price', '$this->SA', '$this->Weight', '$this->Height', '$this->Width', '$this->Length', '$this->Size')";

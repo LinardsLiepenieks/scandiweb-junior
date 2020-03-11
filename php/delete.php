@@ -1,26 +1,23 @@
 <?php  
 
 //Connect to database
-    $servername = "localhost";
-    $username = "root";
-    $password = "";
-    $dbname = "products";
-$conn = new mysqli($servername, $username, $password, $dbname) or die("Connection failed: " . $conn->connect_error);
+require_once "../classes/connect.class.php";
+$con = new Connect();
 
-$del = $_POST['del'];
+$del = $_POST['del']; //array of values to be deleted
 
 //Create Query that deletes every checked item
-    $sql = "DELETE FROM items WHERE SKU IN (";
+    $query = "DELETE FROM items WHERE SKU IN (";
 
     foreach ($del as &$sku) {
-        $sql = $sql. '("'.$sku. '"), ';
+        $query = $query. '("'.$sku. '"), ';
     }
 
-    $sql = substr($sql, 0, -2);
-    $sql = $sql . ');';
+    $query = substr($query, 0, -2);
+    $query = $query . ');';
 
 //execute query
-mysqli_query($conn, $sql);
+$con->connectDB()->query($query);
 echo json_encode($del);
 
 
