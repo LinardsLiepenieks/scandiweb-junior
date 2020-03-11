@@ -1,7 +1,7 @@
 <?php  
 
 
-
+//connect to database
     $servername = "localhost";
     $username = "root";
     $password = "";
@@ -21,15 +21,17 @@ if ($conn->connect_error){
         mysqli_query($conn, 'USE products');
         mysqli_query($conn, 'CREATE TABLE items (SKU CHAR(10) PRIMARY KEY, name CHAR(30), price FLOAT, SA CHAR(40), weight FLOAT, height FLOAT, width FLOAT, length FLOAT, size FLOAT)');
     }}
+//-----------------------------------*/
+
 
     $SKU = $_POST['sku'];
     $Name = $_POST['name'];
     $Price = $_POST['price'];
     $Weight = $Height = $Length = $Width = $Size = '';
-    $SA = $_POST['sa'];
+    $SA = $_POST['sa'];s
     
 
-
+    //Save the proper value for SpecialAttribute
     if($SA == 'book')
     {
         $Weight = $_POST['weight'];
@@ -49,10 +51,12 @@ if ($conn->connect_error){
         echo ('Choose a product type');
         return false;
     }
+    
+    //Insert into database
     $sql = "INSERT INTO items (SKU, name, price, SA, weight, height, width, length, size)
     VALUES ('$SKU', '$Name', '$Price', '$SA', '$Weight', '$Height', '$Width', '$Length', '$Size')";
-
     mysqli_query($conn, $sql);
+
     echo 'Saved';
 
 ?>

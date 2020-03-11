@@ -7,61 +7,59 @@ light red: #E46A69
 
 
 /*----------------------------------------------------- Global alterations*/
-html 
-{
+html {
     box-sizing: border-box;
     font-family: "Arial", sans-serif;
     min-height: 100%;
     margin: 0;
 }
-body
-{
+
+body {
     min-height: 100vh;
     background: #F9F9F9;
-    display:flex; 
-    flex-direction:column;
+    display: flex;
+    flex-direction: column;
 }
-button
-{
+
+button {
     background: #DD4949;
     color: white;
 }
-button:hover
-{
+
+button:hover {
     background: white;
     color: #DD4949;
 }
-header
-{
+
+header {
     padding: 20px;
     background: white;
-    display:flex;
+    display: flex;
 }
-label
-{
+
+label {
     font-size: 40px;
     color: white;
 }
 
 /*-------------------------------------------------------------Header*/
-header h1
-{
+header h1 {
     color: #DD4949;
     font-size: 50px;
     margin: 0;
     width: 20%;
 }
-header button
-{
+
+header button {
     color: white;
     font-size: 20px;
 }
-header select
-{
+
+header select {
     font-size: 20px;
 }
-header span 
-{
+
+header span {
     display: inline-block;
     text-align: right;
     align-self: center;
@@ -69,89 +67,87 @@ header span
 }
 
 /*---------------------------------------------------------body*/
-.body-wrapper
-{
+.body-wrapper {
     padding: 20px;
 }
 
 /*------------------------------------------------item object in product-list*/
-.item
-{
+.item {
     width: 20%;
     height: 25%;
     margin: 25px;
     padding: 5px;
     background: white;
-  border-style: solid;
-  border-color: coral;
-    display:inline-block;
+    border-style: solid;
+    border-color: coral;
+    display: inline-block;
     text-align: center;
 }
-.item input[type="checkbox"]
-{
+
+.item input[type="checkbox"] {
     width: 30px;
     height: 30px;
 }
-.item-row
-{
+
+.item-row {
     width: 100%;
     text-align: center;
 }
-.item label
-{
+
+.item label {
     font-size: 20px;
     color: black;
     display: block;
 }
-#item-top
-{
+
+#item-top {
     width: 100%;
     text-align: left;
 }
 
 /*------------------------------------------------------------Insert box*/
-
-.button-wrapper{
+.button-wrapper {
     background: #E46A69;
     padding: 20px;
     margin: 20px;
     width: 50%;
 }
 
-.button-wrapper input[type="text"]{
+.button-wrapper input[type="text"] {
     float: right;
     height: 40px;
     font-size: 35px;
     width: 50%;
     color: black;
-    
+
 }
-.button-wrapper select
-{
+
+.button-wrapper select {
     float: right;
     height: 40px;
     font-size: 35px;
-    width: 50%;  
+    width: 50%;
 }
+
 /*-------------------------------------------Special Attribute*/
-#special-atribute{
+#special-atribute {
     font-size: 35px;
     color: white;
-    
+
 }
-#special-atribute input[type="text"]{
+
+#special-atribute input[type="text"] {
     color: black;
 }
-#special-atribute p{
+
+#special-atribute p {
     font-size: 20px;
 }
 
 /*-------------------------------------------------------footer*/
-
-footer{
-    width:100%;
+footer {
+    width: 100%;
     height: 40px;
     background: #E46A69;
-  margin-top:auto; 
-
+    margin-top: auto;
 }
