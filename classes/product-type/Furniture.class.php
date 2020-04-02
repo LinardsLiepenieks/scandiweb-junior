@@ -6,7 +6,7 @@ class Furniture extends Product
     protected $Height;
     protected $Width;
     protected $Length;
-
+    
     
     public function get_height()
     {

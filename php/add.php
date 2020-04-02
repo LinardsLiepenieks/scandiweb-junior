@@ -8,8 +8,6 @@ require_once "../classes/product-type/DVD.class.php";
 
 if ($_POST['sa'] != "def") {
     
-            
-    
         if ($_POST['sa'] == 'book')
         {
             $Product = new Book;

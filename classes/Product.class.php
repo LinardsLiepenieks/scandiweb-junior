@@ -9,7 +9,6 @@ class Product extends Connect
     private $SA; //Name of special attribute
     private $Save_query;
     
-    
     public function set_sku($SKU)
     {
         $this->SKU = $SKU;
