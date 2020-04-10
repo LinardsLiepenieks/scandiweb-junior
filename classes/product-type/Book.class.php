@@ -3,16 +3,20 @@ require_once "../classes/Product.class.php";
 
 class Book extends Product
 {
-    protected $Weight;
+    protected $weight;
     
-    public function get_weight()
+    function __construct()
     {
-        return $this->Weight;
+        $this->attributes = array("Weight");
+    }
+    public function getWeight()
+    {
+        return $this->weight;
     }
     
-    public function set_weight($Weight)
+    public function setWeight($weight)
     {
-        $this->Weight = $Weight;
+        $this->weight = $weight;
     }
     
 }

@@ -1,58 +1,53 @@
 <?php
-require_once "connect.class.php";
-class Product extends Connect
+class Product
 {
     //Class variables
     private $SKU;
-    private $Name;
-    private $Price;
-    private $SA; //Name of special attribute
-    private $Save_query;
+    private $name;
+    private $price;
+    private $specialAttribute;
+    protected $attributes;
     
-    public function set_sku($SKU)
+    public function setSKU($SKU)
     {
         $this->SKU = $SKU;
     }
-    public function set_sa($SA)
+    public function setSpecialAttribute($specialAttribute)
     {
-        $this->SA = $SA;
+        $this->specialAttribute = $specialAttribute;
     }
-    public function set_name($Name)
+    public function setName($name)
     {
-        $this->Name = $Name;
+        $this->name = $name;
     }
-    public function set_price($Price)
+    public function setPrice($price)
     {
-        $this->Price = $Price;
+        $this->price = $price;
     }
-    public function set_save_query($Query)
+    public function setSaveQuery($query)
     {
-        $this->Save_query = $Query;
+        $this->saveQuery = $query;
     }
-    public function get_sa()
+    public function getSpecialAttribute()
     {
-        return $this->SA;
+        return $this->specialAttribute;
     }
-      public function get_name()
+      public function getName()
     {
-        return $this->Name;
+        return $this->name;
     }
-      public function get_price()
+      public function getPrice()
     {
-        return $this->Price;
+        return $this->price;
     }
-      public function get_sku()
+      public function getSKU()
     {
         return $this->SKU;
     }
-
-    //Save the proper value for SpecialAttribute
-    function Save()
+       public function getAttributes()
     {
-
-        $this->connectDB()
-            ->query($this->Save_query);
-
-        echo 'Saved';
+        return $this->attributes;
     }
+    //Save the proper value for SpecialAttribute
+
 }

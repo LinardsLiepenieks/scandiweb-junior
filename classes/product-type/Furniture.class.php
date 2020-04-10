@@ -3,35 +3,38 @@ require_once "../classes/Product.class.php";
 
 class Furniture extends Product
 {
-    protected $Height;
-    protected $Width;
-    protected $Length;
+    protected $height;
+    protected $width;
+    protected $length;
     
+    function __construct()
+    {
+        $this->attributes = array("Height", "Width", "Length");
+    }
+    public function getHeight()
+    {
+        return $this->height;
+    }
+     public function getWidth()
+    {
+        return $this->width;
+    }
+     public function getLength()
+    {
+        return $this->length;
+    }
     
-    public function get_height()
+    public function setHeight($height)
     {
-        return $this->Height;
+        $this->height = $height;
     }
-     public function get_width()
+    public function setWidth($width)
     {
-        return $this->Width;
+        $this->width = $width;
     }
-     public function get_length()
+    public function setLength($length)
     {
-        return $this->Length;
-    }
-    
-    public function set_height($Height)
-    {
-        $this->Height = $Height;
-    }
-    public function set_width($Width)
-    {
-        $this->Width = $Width;
-    }
-    public function set_length($Length)
-    {
-        $this->Length = $Length;
+        $this->length = $length;
     }
     
 }

@@ -37,4 +37,46 @@ class Connect
             return $conn;
         }
     }
+    
+    function saveProduct($Product){
+        
+        $query = "INSERT INTO items (SKU, name, price, SA";
+        
+        foreach($Product->getAttributes() as $index=>$attribute)
+        {
+            $query = $query . ", " . $attribute;
+        }
+        
+        $query = $query . ") VALUES (";
+        
+        $query = $query . '"' . $Product->getSKU() . '"' . ", ";
+        $query = $query . '"' . $Product->getName() . '"'  . ", ";
+        $query = $query . $Product->getPrice() . ", ";
+        $query = $query . '"' . $Product->getSpecialAttribute() . '"' . ", ";
+
+        foreach($Product->getAttributes() as $index=>$attribute)
+        {
+            if($index>0)
+            {
+                $query = $query . ", ";
+            }
+            $func = "get" . $attribute ;
+            $query = $query . $Product->$func();
+            
+        }
+        $query = $query . ")";
+        
+        $con = $this->connectDB();
+       $test =  $con->query($query);
+        if($test)
+        {
+            echo ('Saved!');
+        }
+        else
+        {
+            echo ('Something went wrong...');
+            echo("Error description: " . mysqli_error($con));
+            echo($query);
+        }
+    }
 }

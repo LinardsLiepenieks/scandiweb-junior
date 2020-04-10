@@ -3,16 +3,20 @@ require_once "../classes/Product.class.php";
 
 class DVD extends Product
 {
-    protected $Size;
+    protected $size;
     
-    public function get_size()
+    function __construct()
     {
-        return $this->Size;
+        $this->attributes = array("Size");
+    }
+    public function getSize()
+    {
+        return $this->size;
     }
     
-    public function set_size($Size)
+    public function setSize($size)
     {
-        $this->Size = $Size;
+        $this->size = $size;
     }
     
 }
